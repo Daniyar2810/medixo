@@ -1,0 +1,3243 @@
+/* TABLE OF CONTENTS
+
+ * SHOP STYLE
+ * SINGLE PRODUCT
+ * CART PAGE
+ * CHECKOUT PAGE
+ * WIDGETS
+ * RESPONSIVE
+ * SHOP ENGINE
+
+-------------------------------------------------------------- */
+
+/*
+SHOP STYLE
+-------------------------------------------------------------- */
+
+.woocommerce-page #site-content {
+    width: 74.359%;
+    z-index: 2;
+}
+
+.woocommerce-page #sidebar {
+    width: 23.077%;
+    background-color: transparent;
+    padding: 0;
+}
+
+.woocommerce-page #sidebar .widget {
+    margin-bottom: 30px;
+}
+
+.products .product {
+    list-style: none;
+}
+
+.woocommerce-ordering select {
+    line-height: 26px;
+    border-color: var(--e-global-color-medixo_border);
+    background-color: #fff;
+    padding: 20px 30px;
+    width: 270px;
+}
+
+.woocommerce-page .content-woocommerce .woocommerce-result-count {
+    position: relative;
+    margin: 0;
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_text);
+    padding-top: 18px;
+}
+
+.woocommerce-page .content-woocommerce .woocommerce-ordering {
+    float: right;
+    position: relative;
+}
+
+.woocommerce-page .content-woocommerce .woocommerce-ordering select {
+    margin-bottom: 0;
+}
+
+.woocommerce-page .content-woocommerce .woocommerce-ordering select:focus {
+    outline: 0;
+}
+
+.woocommerce-page .content-woocommerce .product-info,
+.woocommerce-page .content-woocommerce .product-info .woocommerce-loop-product__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.woocommerce-page .content-woocommerce .product-info {
+    padding: 25px 30px 30px 30px;
+}
+
+.woocommerce-page .content-woocommerce li.product .inner {
+    transition: 0.3s all ease;
+}
+
+.woocommerce-page .product .product-info .star-rating {
+    zoom: 1;
+    order: 0;
+}
+
+.woocommerce-page:not(.elementor-template-full-width) .star-rating {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    width: 96px;
+    line-height: 1;
+}
+
+.woocommerce-page:not(.elementor-template-full-width) .star-rating:after {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: core-icons;
+    content: '\e93c\e93c\e93c\e93c\e93c';
+    font-size: 16px;
+    color: var(--e-global-color-medixo_light);
+    letter-spacing: 4px;
+    z-index: 0;
+}
+
+.woocommerce-page:not(.elementor-template-full-width) .star-rating span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+}
+
+.woocommerce-page:not(.elementor-template-full-width) .star-rating span:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: core-icons;
+    content: '\e93c\e93c\e93c\e93c\e93c';
+    font-size: 16px;
+    color: var(--rating-color);
+    letter-spacing: 4px;
+    z-index: 1;
+}
+
+.woocommerce-page p.stars {
+    overflow: hidden;
+}
+
+.woocommerce-page p.stars span {
+    width: 96px;
+    height: 16px;
+    position: relative;
+    float: left;
+    line-height: 1;
+}
+
+.woocommerce-page p.stars span:after {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: core-icons;
+    content: '\e93c\e93c\e93c\e93c\e93c';
+    font-size: 16px;
+    color: var(--e-global-color-medixo_light);
+    letter-spacing: 4px;
+    z-index: 0;
+}
+
+.woocommerce-page p.stars span a {
+    transition: none;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 16px;
+    padding-top: 16px;
+    overflow: hidden;
+}
+
+.woocommerce-page p.stars span a:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: core-icons;
+    z-index: 11;
+    opacity: 0;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.woocommerce-page p.stars span a:hover:after,
+p.stars span a:focus:after,
+.woocommerce-page p.stars a.active:after {
+    opacity: 1;
+    color: var(--rating-color);
+}
+
+.woocommerce-page p.stars span a.star-1 {
+    width: 20px;
+    z-index: 10;
+}
+
+.woocommerce-page p.stars span a.star-1:after {
+    content: '\e93c';
+}
+
+.woocommerce-page p.stars span a.star-2 {
+    width: 40px;
+    z-index: 9;
+}
+
+.woocommerce-page p.stars span a.star-2:after {
+    content: '\e93c\e93c';
+}
+
+.woocommerce-page p.stars span a.star-3 {
+    width: 60px;
+    z-index: 8;
+}
+
+.woocommerce-page p.stars span a.star-3:after {
+    content: '\e93c\e93c\e93c';
+}
+
+.woocommerce-page p.stars span a.star-4 {
+    width: 80px;
+    z-index: 7;
+}
+
+.woocommerce-page p.stars span a.star-4:after {
+    content: '\e93c\e93c\e93c\e93c';
+}
+
+.woocommerce-page p.stars span a.star-5 {
+    width: 100px;
+    z-index: 6;
+}
+
+.woocommerce-page p.stars span a.star-5:after {
+    content: '\e93c\e93c\e93c\e93c\e93c';
+}
+
+.woocommerce-page abbr {
+    border: none;
+    text-decoration: none;
+}
+
+.woocommerce-page div.product div.images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+}
+
+.woocommerce-product-gallery__wrapper,
+.woocommerce-page .woocommerce-product-gallery__image.flex-active-slide {
+    overflow: hidden;
+    border: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woocommerce-page .woocommerce-MyAccount-content .woocommerce-info .button {
+    color: var(--e-global-color-medixo_accent);
+    background-color: transparent;
+}
+
+.product .onsale {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    padding: 0 20px;
+    background-color: var(--e-global-color-medixo_accent);
+    color: #fff;
+    z-index: 999;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.pswp__caption,
+.pswp__top-bar,
+.pswp--has_mouse .pswp__button--arrow--left:hover,
+.pswp--has_mouse .pswp__button--arrow--right:hover {
+    background-color: transparent;
+}
+
+/* Product Item */
+
+.woocommerce-page .content-woocommerce .products {
+    position: relative;
+    clear: both;
+    list-style: none;
+}
+
+.woocommerce-page .content-woocommerce .products:after,
+.woocommerce-page .content-woocommerce .products:before {
+    position: relative;
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+ul.products {
+    margin: 0 -15px;
+}
+
+
+ul.products .product {
+    margin-top: 30px;
+}
+
+.wc-block-grid__product.wc-block-grid__product,
+ul.products .product .inner {
+    border: 1px solid var(--e-global-color-medixo_border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.wc-block-grid__product.wc-block-grid__product:hover,
+ul.products .product:hover .inner {
+    box-shadow: 0 0 0 1px var(--e-global-color-medixo_accent);
+    border-color: var(--e-global-color-medixo_accent);
+}
+
+.products.columns-2 li,
+.woocommerce-page.shop-col-2 .products li {
+    width: 50%;
+}
+
+.products.columns-3 li,
+.woocommerce-page.shop-col-3 .products li {
+    width: 33.33%;
+}
+
+.products.columns-4 li,
+.woocommerce-page.shop-col-4 .products li {
+    width: 25%;
+}
+
+.products li {
+    float: left;
+    position: relative;
+    padding: 0 15px;
+}
+
+.products li .product-thumbnail .woocommerce_loop_product_link {
+    transition: all 0.3s ease;
+}
+
+
+.products li:hover .product-thumbnail img {
+    position: relative;
+    transform: scale(1.1) rotate(1.5deg);
+    z-index: -1;
+}
+
+.products li.first {
+    clear: both;
+}
+
+.products li .inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.products li .product-info {
+    position: relative;
+    display: block;
+}
+
+.products li h2 {
+    margin: 5px 0 0;
+    font-size: 22px;
+    line-height: 26px;
+    transition: color ease 0.3s;
+    order: 1;
+}
+
+.wc-block-grid__product .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+.products li .added_to_cart,
+.products li .add_to_cart_button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    opacity: 0;
+    padding: 10px;
+    font-size: 0px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-indent: -99999px;
+    background-color: var(--e-global-color-medixo_accent);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.wc-block-grid__product .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:after,
+.products li .added_to_cart:after,
+.products li .add_to_cart_button:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: "core-icons";
+    content: "\f07a";
+    font-size: 14px;
+    text-indent: 0px;
+    font-weight: 400;
+}
+
+.wc-block-grid__product:hover .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
+.products li:hover .added_to_cart,
+.products li:hover .add_to_cart_button {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+/* Block Products Grid */
+.wc-block-grid.has-4-columns .wc-block-grid__products {
+    gap: 30px;
+    margin: 0;
+}
+
+.wc-block-grid.has-4-columns .wc-block-grid__products .wc-block-grid__product {
+    width: calc(25% - 22.5px);
+    flex: 1 0 calc(25% - 22.5);
+    max-width: calc(25% - 22.5px);
+}
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--e-global-color-medixo_primary);
+    margin-bottom: 0px;
+}
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product-price {
+    color: var(--e-global-color-medixo_accent);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.products.columns-4 li h2,
+.woocommerce-page.shop-col-4 .products li h2 {
+    font-size: 24px;
+    font-weight: 500;
+    order: 1;
+}
+
+.products.columns-4 li .product-info,
+.woocommerce-page.shop-col-4 .products li .product-info {
+    padding: 20px 0 25px 0;
+}
+
+.products.columns-4 li .price,
+.woocommerce-page.shop-col-4 .products li .price {
+    right: 0;
+}
+
+.products li .product-info .button,
+.products li .product-info .added_to_cart {
+    text-transform: uppercase;
+    color: var(--e-global-color-medixo_accent);
+    font-size: 14px;
+    position: relative;
+    padding-right: 14px;
+    display: none;
+}
+
+.products li .product-info .button:before,
+.products li .product-info .added_to_cart:before,
+.products li .product-info .button:after,
+.products li .product-info .added_to_cart:after {
+    font-size: 14px;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all ease 0.3s;
+}
+
+.products li .product-info .button:before,
+.products li .product-info .added_to_cart:before {
+    right: 12px;
+    opacity: 0;
+}
+
+.products li .product-info .button:hover:before,
+.products li .product-info .added_to_cart:hover:before {
+    opacity: 1;
+    right: 0;
+}
+
+.products li .product-info .button:hover:after,
+.products li .product-info .added_to_cart:hover:after {
+    opacity: 0;
+    right: -12px;
+}
+
+.products li .product-info .button:focus,
+.products li .product-info .added_to_cart:focus {
+    text-decoration: underline;
+}
+
+.products li .product-thumbnail {
+    position: relative;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.products li .product-thumbnail .woocommerce_loop_product_link {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.products li .product-thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.products li .product-thumbnail .add_to_cart_button.added {
+    display: none;
+}
+
+.products li .product-thumbnail .button.product_type_grouped,
+.products li .product-thumbnail .button.product_type_external {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    white-space: normal;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 8px 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.products li .product-thumbnail:hover .button.product_type_external,
+.products li .product-thumbnail:hover .button.product_type_grouped {
+    opacity: 1;
+}
+
+.products li .product-thumbnail .added_to_cart:hover,
+.products li .product-thumbnail .add_to_cart_button:hover {
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+.products li .product-thumbnail .onsale {
+    transition: opacity 0.3s;
+}
+
+.products li:hover .inner {
+    overflow: visible;
+}
+
+.products li .price {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--e-global-color-medixo_accent)
+    display: block;
+    margin-bottom: 0px;
+    order: 2;
+}
+
+.products li .product-cat {
+    display: none;
+    font-size: 16px;
+    color: var(--e-global-color-medixo_text);
+}
+
+.products li .product-cat:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+
+.products li .star-rating {
+    display: inline-block;
+}
+
+.products li .price del {
+    color: #999;
+    padding-right: 4px;
+    opacity: 1;
+}
+
+.products li .price ins {
+    background-color: transparent;
+}
+.products li h2:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+
+/* Single Product
+--------------------------------------------------------------*/
+
+.woo-single-post-class {
+    position: relative;
+}
+
+.woo-single-post-class .images {
+    width: 48.746%;
+    float: left;
+    position: relative;
+}
+
+.woo-single-post-class .onsale {
+    z-index: 999;
+}
+
+.woo-single-post-class .images .woocommerce-product-gallery__trigger {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-indent: -9999px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.woo-single-post-class .images .woocommerce-product-gallery__trigger:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    text-indent: 0px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: var(--e-global-color-medixo_accent);
+    text-align: center;
+    color: #fff;
+    transition: color 0.3s, background 0.3s;
+}
+
+.woo-single-post-class .images:hover .woocommerce-product-gallery__trigger:after {
+    opacity: 1;
+}
+
+.woo-single-post-class .images .woocommerce-product-gallery__trigger:hover:after {
+    background-color: var(--e-global-color-medixo_accent);
+    color: #fff;
+}
+
+.woo-single-post-class .images .woocommerce-product-gallery__trigger img {
+    display: none !important;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li {
+    float: left;
+    cursor: pointer;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs {
+    margin: 20px -8px 0;
+    width: auto;
+    list-style: none;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li {
+    padding: 0 8px 16px;
+}
+
+.woocommerce-product-gallery--columns-3 .flex-control-thumbs li {
+    width: 33.333%;
+}
+
+.woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
+    width: 25%;
+}
+
+.woocommerce-product-gallery--columns-5 .flex-control-thumbs li {
+    width: 20%;
+}
+
+.woocommerce-product-gallery--columns-6 .flex-control-thumbs li {
+    width: 16.667%;
+}
+
+.woo-single-post-class .summary {
+    width: 40.171%;
+    float: right;
+}
+
+.shopengine-single .product-title,
+.woo-single-post-class .summary h1 {
+    color: var(--e-global-color-medixo_primary);
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 30px 5px 0;
+    display: inline-flex;
+}
+
+.woo-single-post-class .summary .woocommerce-product-rating {
+    position: relative;
+    display: flex;
+    padding: 0 0 30px;
+    border-bottom: 1px solid var(--e-global-color-medixo_border);
+}
+
+.shopengine-single .woocommerce-product-rating .woocommerce-review-link {
+    font-size: 16px;
+    line-height: 1;
+    color: var(--e-global-color-medixo_text);
+}
+
+.woo-single-post-class .summary .woocommerce-review-link {
+    font-size: 16px;
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    line-height: 1;
+    color: var(--e-global-color-medixo_text);
+}
+
+.shopengine-product-price .price,
+.woo-single-post-class .summary .price {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 500;
+    margin: 0 0 5px;
+    position: relative;
+    display: inline-block;
+    color: var(--e-global-color-medixo_accent);
+}
+
+.woo-single-post-class .summary .price del {
+    color: #999;
+    padding-right: 2px;
+    opacity: 1;
+}
+
+.woo-single-post-class .summary .price ins {
+    background-color: transparent;
+}
+
+.woo-single-post-class .woocommerce-product-details__short-description {
+    padding-top: 20px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.woocommerce-product-details__short-description .wc-tab {
+    display: block !important;
+}
+
+.woo-single-post-class .summary .cart table,
+.woo-single-post-class .summary .cart tr,
+.woo-single-post-class .summary .cart td,
+.woo-single-post-class .summary .cart th {
+    border: 0;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.woo-single-post-class .summary .cart td {
+    vertical-align: middle;
+}
+
+.woo-single-post-class .summary .cart td.woocommerce-grouped-product-list-item__quantity .quantity-title {
+    display: none;
+}
+
+.woo-single-post-class .summary .cart td.woocommerce-grouped-product-list-item__quantity .quantity {
+    margin: 0;
+}
+
+.woo-single-post-class .summary .cart td p {
+    margin-bottom: 0;
+}
+
+.woo-single-post-class .summary .cart .woocommerce-grouped-product-list-item td {
+    vertical-align: middle;
+    width: 200px;
+}
+
+.woo-single-post-class .summary .cart td.woocommerce-grouped-product-list-item__quantity {
+    padding-left: 0;
+    width: 110px;
+}
+
+.woo-single-post-class .summary .cart table .label {
+    width: 85px;
+    color: var(--e-global-color-medixo_primary);
+    text-transform: uppercase;
+}
+
+.woo-single-post-class .summary .cart table select {
+    margin-bottom: 0;
+}
+
+.woo-single-post-class .summary .cart {
+    margin-top: 20px;
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.woo-single-post-class .summary .cart .title {
+    order: 0;
+}
+
+.woo-single-post-class .summary .cart .quantity {
+    order: 1;
+    width: auto;
+}
+
+.woo-single-post-class .summary .cart .single_add_to_cart_button {
+    order: 2;
+}
+
+.medixo-add-to-cart .shopengine-swatches .shopengine-wishlist,
+.woo-single-post-class .summary .cart .shopengine-wishlist {
+    font-size: 18px !important;
+    line-height: 30px !important;
+    padding: 15px 30px !important;
+    border-radius: 0 !important;
+    order: 3;
+}
+
+.product-quantity .quantity,
+.woo-single-post-class .summary .cart .quantity {
+    position: relative;
+    display: inline-block;
+    float: left;
+    background-color: transparent;
+    height: 60px;
+    border: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woo-single-post-class .summary .cart .quantity {
+    margin: 0 10px 30px 0;
+}
+
+.quantity-title {
+    display: none;
+}
+
+.shopengine-swatches .cart .quantity-title,
+.woo-single-post-class .summary .cart .quantity-title {
+    display: none;
+    font-size: 20px;
+    line-height: 60px;
+    height: 60px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_primary);
+    float: left;
+    margin-right: 10px;
+}
+
+.product-quantity .quantity input::-webkit-outer-spin-button,
+.product-quantity .quantity input::-webkit-inner-spin-button,
+.woo-single-post-class .summary .cart .quantity input::-webkit-outer-spin-button,
+.woo-single-post-class .summary .cart .quantity input::-webkit-inner-spin-button {
+    display: none;
+    margin: 0;
+}
+
+.product-quantity .quantity input.qty,
+.woo-single-post-class .summary .cart .quantity input.qty {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    font-size: 18px;
+    font-weight: 500;
+    width: 65px;
+    height: 60px;
+    border-right: 1px solid var(--e-global-color-medixo_border);
+    margin-right: 30px;
+    color: var(--e-global-color-medixo_primary); 
+}
+
+.product-quantity .quantity input.qty {
+    border: none;
+}
+
+.medixo-add-to-cart .quantity {
+    position: relative;
+}
+
+.medixo-add-to-cart .quantity .qty_button,
+.product-quantity .quantity .qty_button,
+.woo-single-post-class .summary .cart .quantity .qty_button {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    color: var(--e-global-color-medixo_primary);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0;
+    transition: 0.3s;
+    border-radius: 0;
+    font-weight: 500;
+}
+
+.product-quantity .quantity .qty_button {
+    border-left: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woo-single-post-class .summary .cart .quantity .qty_button {
+    right: -1px;
+}
+
+.product-quantity .quantity .qty_button.plus,
+.woo-single-post-class .summary .cart .quantity .qty_button.plus {
+    top: unset;
+    bottom: 0;
+    border-top: 1px solid var(--e-global-color-medixo_border);
+}
+
+.product-quantity .quantity .qty_button:hover,
+.woo-single-post-class .summary .cart .quantity .qty_button:hover {
+    color: var(--e-global-color-medixo_primary);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.medixo-add-to-cart .quantity input,
+.product-quantity .quantity input,
+.woo-single-post-class .summary .cart .quantity input {
+    border: none;
+    width: 50px;
+    height: 60px;
+    margin: 0;
+    text-align: center;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+    padding: 11px;
+}
+
+.medixo-add-to-cart .shopengine-widget .shopengine-swatches .cart .quantity .qty {
+    margin-right: 30px;
+}
+
+.medixo-add-to-cart .quantity .qty_button.qty_button {
+    right: 1px;
+}
+
+.medixo-add-to-cart .quantity .qty_button.qty_button.minus {
+    border: 1px solid var(--e-global-color-medixo_border);
+    border-bottom: none;
+}
+
+.medixo-add-to-cart .quantity .qty_button.qty_button.plus {
+    top: unset;
+    bottom: 0;
+    border: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woo-single-post-class .summary .cart .single_add_to_cart_button {
+    line-height: 60px;
+    height: 60px;
+    padding: 0 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.woo-single-post-class .summary .cart table {
+    position: relative;
+}
+
+.woo-single-post-class .summary .cart .reset_variations {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}
+
+.woo-single-post-class .woocommerce-tabs .panel .shop_attributes p {
+    margin-bottom: 5px;
+}
+
+.woo-single-post-class .woocommerce-grouped-product-list-item__quantity {
+    width: 100px;
+}
+
+.woo-single-post-class .woocommerce-grouped-product-list-item__label a {
+    color: var(--e-global-color-medixo_primary);
+}
+
+.woo-single-post-class .woocommerce-grouped-product-list-item__label a:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+
+.woo-single-post-class .summary .product_meta {
+    clear: left;
+    margin-top: 5px;
+}
+
+.woo-single-post-class .summary .product_meta > span {
+    display: block;
+    color: var(--e-global-color-medixo_text);
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.woo-single-post-class .summary .product_meta > span:last-child {
+    margin-bottom: 0;
+}
+
+.woo-single-post-class .summary .product_meta > span .title {
+    color: var(--e-global-color-medixo_primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shopengine-product-meta .product_meta :is(.sku, .posted_in a, .tagged_as a),
+.woo-single-post-class .summary .product_meta > span a {
+    color: var(--e-global-color-medixo_text);
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+
+.woo-single-post-class .summary .product_meta > span a:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+
+.woo-single-post-class .summary .product_meta > span a:first-child {
+    padding-left: 10px;
+}
+
+.woo-single-post-class > .woocommerce-tabs {
+    clear: both;
+    margin-top: 60px;
+}
+
+.woo-single-post-class > .woocommerce-tabs ul.tabs {
+    margin: 0;
+    border-bottom: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woo-single-post-class > .woocommerce-tabs ul.tabs li {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.woo-single-post-class > .woocommerce-tabs ul.tabs li > a {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0px 0px 15px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_primary);
+    background-color: transparent;
+    cursor: pointer;
+    transition: none;
+    border-bottom: none;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+    position: relative;
+}
+
+.woo-single-post-class > .woocommerce-tabs ul.tabs li.active > a {
+    border-color: var(--e-global-color-medixo_accent);
+}
+
+.woo-single-post-class > .woocommerce-tabs .panel {
+    clear: both;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--e-global-color-medixo_border);
+}
+
+.shop-no-related-product > .woo-single-post-class .woocommerce-tabs .panel {
+    padding-bottom: 0;
+}
+
+.shop-no-related-product > .woo-single-post-class .woocommerce-tabs .panel p:last-child {
+    margin-bottom: 0;
+}
+
+.woo-single-post-class > .woocommerce-tabs .panel p:last-child {
+    margin-bottom: 0;
+}
+
+.commentlist {
+    clear: both;
+    list-style: none;
+    margin: 0;
+}
+
+.commentlist li {
+    overflow: hidden;
+    position: relative;
+    min-height: 100px;
+    padding: 30px 0 35px;
+    border-bottom: 1px solid var(--e-global-color-medixo_border);
+}
+
+.commentlist li:first-child {
+    padding-top: 0;
+}
+
+.commentlist li .description > p:last-child {
+    margin-bottom: 0;
+}
+
+.commentlist li:before,
+.commentlist li:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.comment_container img {
+    width: 164px;
+    height: 164px;
+    border-radius: 50% !important;
+    float: left;
+    margin: 0 50px 0 0;
+    overflow: hidden;
+}
+
+.comment-text {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.woocommerce-page #comments .star-rating {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.elementor-widget-mae-product-review .meta,
+.woo-single-post-class .woocommerce-tabs .entry-content .meta {
+    margin: 0 0 30px;
+}
+
+.elementor-widget-mae-product-review .meta strong,
+.woo-single-post-class .woocommerce-tabs .entry-content .meta strong {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--e-global-color-medixo_primary);
+    margin: 3px 10px 3px 0;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.woo-single-post-class .woocommerce-tabs .entry-content .meta .woocommerce-review__author,
+.woocommerce-review__published-date {
+    display: inline-block;
+}
+
+.elementor-widget-mae-product-review .meta .woocommerce-review__dash,
+.meta .woocommerce-review__dash {
+    display: none;
+}
+
+.elementor-widget-mae-product-review .meta .woocommerce-review__published-date,
+.meta .woocommerce-review__published-date {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 5px;
+    color: var(--e-global-color-medixo_accent);
+}
+
+.comment-text .description {
+    overflow: hidden;
+}
+
+#comment > p {
+    margin-bottom: 0;
+}
+
+.comment-respond {
+    margin: 30px 0 0;
+}
+
+.woo-single-post-class .related.products > h2,
+.woocommerce-Reviews-title,
+.comment-respond .comment-reply-title {
+    font-size: 32px;
+    color: var(--e-global-color-medixo_primary);
+    display: block;
+    margin: 45px 0 20px;
+}
+
+.woocommerce-Reviews-title {
+    margin: 0 0 55px;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form > p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form > .comment-form-author,
+.woocommerce-Reviews .comment-respond .comment-form > .comment-form-email {
+    display: inline-block;
+    width: calc(50% - 15px);
+}
+
+.woocommerce-Reviews .comment-respond .comment-form > .comment-form-author {
+    margin-right: 30px;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form > p.comment-form-cookies-consent {
+    margin-bottom: 10px;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form > p.form-submit {
+    clear: both;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-rating {
+    padding-bottom: 0;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-rating > label,
+.woocommerce-Reviews .comment-respond .comment-form-rating > .stars {
+    float: left;
+    margin: 0;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-rating > label {
+    color: var(--e-global-color-medixo_text);
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-rating > .stars {
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-comment {
+    clear: left;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-comment > label {
+    display: none;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-comment textarea,
+.woocommerce-Reviews .comment-respond .comment-form-author input,
+.woocommerce-Reviews .comment-respond .comment-form-email input {
+    width: 100%;
+}
+
+.woocommerce-Reviews .comment-respond .comment-form-comment textarea {
+    height: 180px;
+}
+
+.woocommerce-tabs .product-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.woocommerce-tabs .product-desc .text-wrap {
+    flex-basis: 470px;
+    margin-right: 30px;
+}
+.woocommerce-tabs .product-desc .image-wrap {
+    flex-basis: 570px;
+}
+.woocommerce-tabs .product-desc .image-wrap img {
+    overflow: hidden;
+}
+
+.woocommerce-Reviews #commentform {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.woocommerce-Reviews #commentform .comment-form-rating,
+.woocommerce-Reviews #commentform .comment-form-comment {
+    width: 100%;
+}
+
+.woocommerce-Reviews #commentform .form-submit,
+.woocommerce-Reviews #commentform .comment-form-email,
+.woocommerce-Reviews #commentform .comment-form-author { order: 1; }
+
+/* Related Products */
+
+.woo-single-post-class .related.products .products:before,
+.woo-single-post-class .related.products .products:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.woo-single-post-class .related.products .products {
+    margin: 0 -15px;
+    padding-top: 0;
+}
+
+.woo-single-post-class .related.products .products li {
+    float: left;
+    padding: 0 15px;
+}
+
+/* Cart Page
+--------------------------------------------------------------*/
+
+.woocommerce-page .shop_table.cart .product-remove {
+    width: 60px;
+}
+
+.woocommerce-cart-form__cart-item .cart_item {
+    font-size: 18px;
+}
+
+.woocommerce-page .shop_table.cart .product-thumbnail,
+.woocommerce-page .shop_table.cart .product-price,
+.woocommerce-page .shop_table.cart .product-quantity,
+.woocommerce-page .shop_table.cart .product-subtotal {
+    width: 180px;
+}
+
+.woocommerce-page .shop_table th {
+    font-size: 22px;
+    color: var(--e-global-color-medixo_primary);
+    font-weight: 500;
+}
+
+.woocommerce-page .shop_table td,
+.woocommerce-page .shop_table th {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.woocommerce-page .shop_table td {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.woocommerce-page .shop_table td a {
+    color: var(--e-global-color-medixo_primary);
+}
+
+.woocommerce-page .shop_table td a:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+
+.woocommerce-page .shop_table th {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.woocommerce-page .shop_table img {
+    max-width: 150px;
+    margin-right: 30px;
+}
+
+.woocommerce-page .shop_table.cart .product-name a:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+
+.woocommerce-page .shop_table.cart .product-remove a {
+    position: relative;
+    text-indent: -9999px;
+    display: inline-block;
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+}
+
+.woocommerce-page .shop_table.cart .product-remove a:after {
+    color: var(--e-global-color-medixo_primary);
+    font-size: 14px;
+    text-indent: 0;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    transition: color ease 0.3s;
+}
+
+.woocommerce-page .shop_table.cart .product-remove a:hover:after {
+    color: var(--e-global-color-medixo_primary);
+}
+
+.woocommerce-page .shop_table.cart .cart_item .product-thumbnail img {
+    width: 80px;
+}
+
+.woocommerce-page .shop_table.cart .cart_item .product-quantity input[type="number"] {
+    margin: 0;
+    padding-right: 44px;
+    width: 96px;
+}
+
+.woocommerce-page .shop_table.cart .coupon {
+    float: left;
+    display: table;
+}
+
+.woocommerce-page input,
+.woocommerce-page button {
+    vertical-align: middle;
+}
+
+.woocommerce-page .shop_table.cart .coupon > label {
+    display: none;
+}
+
+.woocommerce-page .shop_table.cart .coupon #coupon_code {
+    width: 240px;
+    border: 0;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    border: 2px solid var(--e-global-color-medixo_light);
+}
+
+.woocommerce-page .shop_table.cart .coupon button[type="submit"] {
+    background-color: var(--e-global-color-medixo_accent);
+}
+
+.woocommerce-page .shop_table.cart .coupon button[type="submit"]:hover {
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+.woocommerce-page .shop_table.cart .coupon + button[type="submit"] {
+    float: right;
+}
+
+.woocommerce-page .cart_totals {
+    width: 60%;
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+.woocommerce-page .cart_totals > h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.woocommerce-page .cart_totals .shop_table {
+    border: 1px solid var(--e-global-color-medixo_border);
+    margin-bottom: 40px;
+}
+
+.woocommerce-page .cart_totals .shop_table th,
+.woocommerce-page .cart_totals .shop_table td {
+    border-color: var(--e-global-color-medixo_border);
+}
+
+.woocommerce-page .cart_totals .shop_table .order-total th,
+.woocommerce-page .cart_totals .shop_table .order-total td {
+    border-bottom: 0;
+}
+
+.woocommerce-page .cart_totals .shop_table td {
+    border-right: 0;
+    padding: 17px 20px;
+    font-size: 22px;
+}
+
+.woocommerce-page .cart_totals .shop_table th {
+    font-size: 22px;
+    color: var(--e-global-color-medixo_primary);
+    padding: 14px 20px;
+}
+
+.woocommerce-page .cart_totals .shop_table .amount {
+    color: var(--e-global-color-medixo_text);
+}
+
+.woocommerce-page .cart_totals .shop_table .order-total .amount {
+    font-weight: 600;
+    color: var(--e-global-color-medixo_accent);
+}
+
+.woocommerce-page .cart_totals .shop_table .cart-subtotal td,
+.woocommerce-page .cart_totals .shop_table .order-total td,
+.woocommerce-page .cart_totals .shop_table .tax-rate td {
+    text-align: right;
+    color: var(--e-global-color-medixo_primary);
+    font-weight: 600;
+}
+
+.woocommerce-page .cart_totals p,
+.woocommerce-page .cart_totals .woocommerce-shipping-calculator select {
+    margin: 0 0 5px;
+}
+
+.woocommerce-page .cart_totals .shipping-calculator-form button[type="submit"] {
+    width: 100%;
+}
+
+.woocommerce-page .wc-proceed-to-checkout .button {
+    font-size: 16px;
+    display: inline-block;
+    -webkit-appearance: none;
+    transition: all ease 0.3s;
+}
+
+.woocommerce-page .return-to-shop a {
+    margin-top: 25px;
+    color: #fff;
+    background-color: var(--e-global-color-medixo_accent);
+}
+
+.woocommerce-page .return-to-shop a:hover {
+    background-color: var(--e-global-color-medixo_primary);
+    color: #fff;
+}
+
+/* Checkout Page
+--------------------------------------------------------------*/
+.woocommerce-page .woocommerce-checkout {
+    clear: both;
+}
+.woocommerce-page .login input {
+    margin-bottom: 0;
+}
+.woocommerce-page form .form-row {
+    margin: 0 0 20px;
+}
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+    float: left;
+    width: 49%;
+    overflow: visible;
+}
+.woocommerce-page form .form-row input.input-text,
+.woocommerce-page form .form-row textarea {
+    border-width: 2px;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+}
+.woocommerce-billing-fields .select2-container--default .select2-selection--single,
+.woocommerce-shipping-fields .select2-container--default .select2-selection--single {
+    display: block;
+    line-height: 60px;
+    height: 60px;
+    border-color: var(--e-global-color-medixo_light);
+    background-color: var(--e-global-color-medixo_light);
+    font-size: 14px;
+}
+.woocommerce-billing-fields .select2-selection--single .select2-selection__rendered,
+.woocommerce-shipping-fields .select2-selection--single .select2-selection__rendered {
+    padding: 15px 30px;
+    color: var(--e-global-color-medixo_text);
+}
+.woocommerce-billing-fields .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 22px;
+    right: 20px;
+}
+.woocommerce-page form.checkout_coupon > p {
+    margin-bottom: 10px;
+}
+.woocommerce-page form.checkout_coupon #coupon_code,
+.woocommerce-page form.lost_reset_password .form-row input.input-text {
+    margin-bottom: 20px;
+}
+.woocommerce-page form .form-row label.inline {
+    display: inline;
+}
+.woocommerce-page form .form-row label.inline input {
+    margin: 0 5px 0 10px;
+    width: auto;
+}
+.woocommerce-page form.lost_reset_password .woocommerce-Button.button {
+    margin: 0;
+}
+.woocommerce-page .woocommerce-shipping-fields,
+.woocommerce-page #order_review_heading {
+    clear: both;
+}
+.woocommerce-billing-fields .create-account > label {
+    margin: 0;
+    display: inline-block;
+}
+.woocommerce-page .woocommerce-lost-password .form-row-first {
+    float: none;
+}
+.woocommerce-page #ship-to-different-address > label {
+    padding-right: 5px;
+}
+.woocommerce-page .woocommerce-billing-fields h3,
+.woocommerce-page .woocommerce-shipping-fields h3,
+.woocommerce-page #order_review_heading,
+.woocommerce-page .woocommerce-additional-fields h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+.woocommerce-page .woocommerce-additional-fields .notes > label {
+    display: none;
+}
+.woocommerce-page form .form-row.create-account #createaccount {
+    width: auto;
+    margin-right: 5px;
+}
+.woocommerce-page form .form-row.create-account + .create-account > p:first-child {
+    margin-bottom: 10px;
+}
+.woocommerce-checkout-review-order table th {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_primary);
+    padding: 18px 30px;
+}
+.woocommerce-checkout-review-order table td {
+    padding: 10px 25px;
+    font-weight: 600;
+}
+.woocommerce-checkout-review-order .cart-subtotal td,
+.woocommerce-checkout-review-order .order-total {
+    font-size: 18px;
+    color: var(--e-global-color-medixo_primary);
+    font-weight: 500;
+}
+.woocommerce-checkout #payment ul.payment_methods {
+    list-style: none;
+    margin: 0;
+}
+.woocommerce-checkout #payment ul.payment_methods li label {
+    display: inline-block;
+    padding-left: 5px;
+}
+#payment .about_paypal {
+    position: absolute;
+    right: 0;
+    top: 23px;
+}
+#payment .payment_methods > li:not(.woocommerce-notice) {
+    position: relative;
+}
+#payment .payment_methods > li .payment_box,
+#payment .place-order {
+    background-color: #fff;
+    padding: 10px;
+}
+#payment .payment_methods > li .payment_box > p:last-child {
+    margin-bottom: 0;
+}
+#payment .payment_methods > .wc_payment_method > label,
+#payment .payment_methods > .woocommerce-PaymentMethod > label {
+    display: block;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.woocommerce-page #payment .payment_methods .woocommerce-message,
+.woocommerce-page #payment .payment_methods .woocommerce-info,
+.woocommerce-page #payment .payment_methods .woocommerce-error {
+    margin-bottom: 10px;
+}
+#payment .payment_methods li img {
+    border: 0;
+    padding: 0 0 0 10px;
+    max-height: 25px;
+}
+#payment .place-order {
+    padding: 25px 25px 0 0;
+}
+#payment #place_order {
+    margin-top: 15px;
+}
+.woocommerce-page .myaccount_user + h2,
+.woocommerce-page .addresses h3,
+.woocommerce-page #customer_login h2 {
+    margin-bottom: 0;
+    font-size: 30px;
+}
+.woocommerce-page .register input {
+    margin-bottom: 0;
+}
+.woocommerce-page .woocommerce-MyAccount-content legend {
+    border: 0;
+    font-size: 18px;
+    color: var(--e-global-color-medixo_primary);
+    padding-top: 20px;
+    margin: 0;
+}
+.woocommerce-page .form-row:before,
+.woocommerce ul.cart_list li:after,
+.woocommerce-page ul.cart_list li:before,
+.woocommerce-page ul.product_list_widget li:after,
+.woocommerce-page ul.product_list_widget li:before,
+.woocommerce-page .cart-collaterals .shipping_calculator:after,
+.woocommerce-page .cart-collaterals .shipping_calculator:before,
+.woocommerce-page .cart-collaterals:after,
+.woocommerce-page .cart-collaterals:before,
+.woocommerce-page form .form-row:after,
+.woocommerce-page form .form-row:before,
+.woocommerce-page ul.cart_list li:after,
+.woocommerce-page ul.cart_list li:before,
+.woocommerce-page ul.product_list_widget li:after,
+.woocommerce-page ul.product_list_widget li:before {
+    content: " ";
+    display: table;
+}
+.woocommerce-page .cart-collaterals {
+    width: 100%;
+}
+.woocommerce-page .cart-collaterals .related {
+    width: 30.75%;
+    float: left;
+}
+.woocommerce-page .cart-collaterals .cross-sells {
+    width: 100%;
+    float: left;
+}
+.woocommerce-page .cart-collaterals .cross-sells ul.products {
+    float: none;
+    list-style: none;
+    margin: 0 -12px;
+}
+.woocommerce .cart-collaterals .cross-sells ul.products li,
+.woocommerce-page .cart-collaterals .cross-sells ul.products li {
+    width: 25%;
+    padding: 0 12px;
+    clear: none;
+}
+.woocommerce-page .cart-collaterals .cross-sells > h2 {
+    margin-top: 40px;
+    margin-bottom: 37px;
+    font-size: 16px;
+    color: #999;
+    text-transform: uppercase;
+}
+.woocommerce-page .cart-collaterals .cross-sells .products li h2 {
+    font-size: 15px;
+}
+.woocommerce-page .cart-collaterals .cross-sells .products li .price {
+    letter-spacing: normal;
+    font-size: 18px;
+}
+.woocommerce-page .up-sells > h2 {
+    font-size: 16px;
+    color: #999;
+    text-transform: uppercase;
+    padding-top: 27px;
+    border-top: 1px solid #f4f4f4;
+}
+.woocommerce-page .up-sells.products,
+.woocommerce-page .up-sells .products {
+    margin: 0;
+}
+.woocommerce-page .up-sells .products {
+    margin: 0 -15px;
+}
+.woocommerce-page .up-sells .products li {
+    padding: 0 15px;
+}
+.woocommerce .cart-collaterals .shipping_calculator:after,
+.woocommerce form .form-row-wide,
+.woocommerce form .form-row:after,
+.woocommerce ul.cart_list li:after,
+.woocommerce ul.product_list_widget li:after,
+.woocommerce-page .cart-collaterals .shipping_calculator:after,
+.woocommerce-page form .form-row-wide,
+.woocommerce-page form .form-row:after,
+.woocommerce-page ul.cart_list li:after,
+.woocommerce-page ul.product_list_widget li:after,
+.woocommerce-page #order_comments_field {
+    clear: both;
+}
+.woocommerce-page .cart-collaterals .shipping_calculator .col2-set .col-1,
+.woocommerce-page .cart-collaterals .shipping_calculator .col2-set .col-2 {
+    width: 48%;
+}
+.woocommerce form .form-row label,
+.woocommerce-page form .form-row label {
+    display: block;
+    margin-bottom: 10px;
+}
+.woocommerce form .form-row label.checkbox,
+.woocommerce-page form .form-row label.checkbox {
+    display: inline;
+}
+.woocommerce-page form .form-row select,
+.woocommerce-page form .form-row .input-text {
+    width: 100%;
+}
+.woocommerce-page form .form-row-last {
+    float: right;
+}
+.woocommerce-page #payment .terms,
+.woocommerce-page #payment .wc-terms-and-conditions {
+    text-align: left;
+    padding: 0 1em 0 0;
+    float: left;
+}
+.woocommerce-page .woocommerce-error li {
+    padding: 0;
+}
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-page .woocommerce-info .button,
+.woocommerce-page .woocommerce-error .button {
+    background-color: transparent;
+    text-transform: capitalize;
+}
+.woocommerce-page .woocommerce-message .button:before,
+.woocommerce-page .woocommerce-info .button:before,
+.woocommerce-page .woocommerce-error .button:before {
+    display: none;
+}
+
+.woocommerce-page .woocommerce-message,
+.woocommerce-page .woocommerce-info,
+.woocommerce-page .woocommerce-error {
+    position: relative;
+    padding: 18px 24px 18px 50px;
+    background-color: #e4f2ff;
+    color: #5084b4;
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.woocommerce-page .woocommerce-message:before,
+.woocommerce-page .woocommerce-info:before,
+.woocommerce-page .woocommerce-error:before {
+    font-size: 14px;
+    position: absolute;
+    left: 30px;
+    top: 18px;
+}
+
+.woocommerce-page .woocommerce-message a,
+.woocommerce-page .woocommerce-info a,
+.woocommerce-page .woocommerce-error a {
+    color: var(--e-global-color-medixo_primary);
+    text-decoration: underline;
+    padding: 0 8px 0 0;
+    line-height: normal;
+}
+
+.woocommerce-page .woocommerce-message a:hover,
+.woocommerce-page .woocommerce-info a:hover,
+.woocommerce-page .woocommerce-error a:hover {
+    opacity: 0.7;
+    color: var(--e-global-color-medixo_primary) !important;
+}
+
+/* Widgets
+--------------------------------------------------------------*/
+.woocommerce-page #sidebar .widget {
+    padding: 21px 30px;
+}
+.woocommerce-page #sidebar .widget.widget_block .wp-block-group {
+    padding: 0;
+}
+
+.woocommerce-page #sidebar .widget {
+    background-color: transparent;
+    border: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woocommerce-page #sidebar .widget.widget_block {
+    padding: 22px 30px;
+}
+
+.product_list_widget li {
+    padding: 0;
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid var(--e-global-color-medixo_border);
+}
+.product_list_widget li:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border: 0;
+}
+.product_list_widget li > a {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_primary);
+    margin: 5px 0;
+}
+.product_list_widget del .amount {
+    padding-right: 5px;
+}
+.product_list_widget li img {
+    float: right;
+    width: 50px;
+    box-shadow: none;
+}
+.product_list_widget .product-title,
+.widget_recent_reviews .product_list_widget a {
+    display: block;
+    color: var(--e-global-color-medixo_text);
+    transition: all ease 0.3s;
+}
+.product_list_widget .product-title:hover,
+.widget_recent_reviews .product_list_widget a:hover {
+    color: var(--e-global-color-medixo_accent);
+}
+.product_list_widget .star-rating,
+.widget_rating_filter .star-rating {
+    width: 100px;
+    height: 17px;
+    background: url(../img/star.png) repeat-x left 0;
+    margin: 5px 0 5px -5px;
+    background-size: 20px;
+}
+
+.product_list_widget .star-rating span,
+.widget_rating_filter .star-rating span {
+    background: url(../img/star.png) repeat-x left -17px;
+    height: 0;
+    padding-top: 17px;
+    overflow: hidden;
+    float: left;
+    background-size: 20px;
+}
+
+.widget_rating_filter .star-rating {
+    display: inline-block;
+    margin: 0;
+}
+
+/* Widget product */
+#footer .product_list_widget .product-title, 
+#footer .widget_recent_reviews .product_list_widget a {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* Widget product search */
+.woocommerce-page #sidebar .widget.widget_block.widget_search {
+    padding: 0;
+}
+
+.woocommerce-page #sidebar .widget.widget_block.widget_search .wp-block-search__input,
+.woocommerce-page #sidebar .widget.widget_block.widget_search .search-form .search-field {
+    height: 68px;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 18px 30px;
+    border-color: var(--e-global-color-medixo_accent);
+    background-color: var(--e-global-color-medixo_accent);
+    color: #fff;
+}
+
+.woocommerce-page #sidebar .widget.widget_block.widget_search .search-form .search-submit, 
+.woocommerce-page #sidebar .widget.widget_block.widget_search .wp-block-search .wp-block-search__button {
+    right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.woocommerce-page #sidebar .wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button .search-icon {
+    display: none;
+}
+
+/* Widget product categories */
+.wc-block-product-categories {
+    margin-bottom: 0;
+}
+
+
+.wc-block-product-categories-list .wc-block-product-categories-list-item-count,
+.widget_product_categories .cat-item .wc-block-product-categories-list-item-count {
+    position: relative;
+    top: -2px;
+    font-size: 16px;
+    line-height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+
+.wc-block-product-categories-list a,
+.widget_product_categories .cat-item a {
+    display: inline-block;
+    text-align: left;
+    font-size: 16px;
+    padding: 0;
+}
+
+.wc-block-product-categories-list,
+.widget_product_categories ul {
+    margin-top: -8px;
+}
+
+.wc-block-product-categories-list ul,
+.widget_product_categories ul ul {
+    padding-left: 16px;
+    line-height: 22px;
+}
+
+.wc-block-product-categories-list li,
+.widget_product_categories ul li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4px 0 4px;
+    line-height: 20px;
+}
+
+.wc-block-product-categories-list > li a:before,
+.widget_product_categories > ul > li a:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    line-height: 38px;
+    display: none;
+}
+
+.wc-block-product-categories-list > li:first-child,
+.widget_product_categories > ul > li:first-child {
+    border-top: none;
+}
+
+.wc-block-product-categories-list ul li:last-child,
+.widget_product_categories ul ul li:last-child {
+    padding-bottom: 0;
+}
+
+.wc-block-product-categories-list ul li:first-child,
+.widget_product_categories ul ul li:first-child {
+    margin-top: 14px;
+}
+
+.wc-block-product-categories-list li a,
+.widget_product_categories ul li a {
+    position: relative;
+    color: var(--e-global-color-medixo_text);
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+.wc-block-product-categories-list li a:hover,
+.widget_product_categories ul li a:hover {
+    color: var(--e-global-color-medixo_primary);
+}
+
+.wc-block-product-categories-list > li a:hover:before,
+.widget_product_categories > ul > li a:hover:before {
+    color: var(--e-global-color-medixo_accent);
+}
+
+#sidebar .widget .wc-block-product-categories-list--has-images .wc-block-product-categories-list-item {
+    margin: 4px 0 4px 48px;
+}
+
+#footer .widget .wc-block-product-categories-list--has-images .wc-block-product-categories-list-item ul,
+#footer .widget .wp-block-group .wc-block-product-categories-list--has-images .wc-block-product-categories-list-item ul,
+.widget .wc-block-product-categories-list--has-images .wc-block-product-categories-list-item ul,
+.widget .wp-block-group .wc-block-product-categories-list--has-images .wc-block-product-categories-list-item ul {
+    padding-left: 0;
+    margin-left: -20px;
+    width: calc(100% + 20px);
+}
+
+#footer .widget_product_categories ul ul,
+#footer .wc-block-product-categories ul ul {
+    width: 100%;
+}
+
+/* Product categories */
+#footer .wc-block-product-categories__button,
+#sidebar .wc-block-product-categories__button {
+    display: none;
+}
+
+#footer .wc-block-product-categories__dropdown,
+#sidebar .wc-block-product-categories__dropdown {
+    width: 100%;
+}
+
+/* Widget price filter */
+.woocommerce-page #sidebar .widget.widget_price_filter .widget-title {
+    margin-bottom: 3px;
+}
+
+#sidebar .wc-block-components-price-slider__range-input-wrapper {
+    height: 5px;
+    background: var(--e-global-color-medixo_light);
+}
+#sidebar .wc-block-components-price-slider__range-input-progress {
+    height: 5px;
+    background-color: var(--e-global-color-medixo_light);
+    --track-background: linear-gradient(90deg,transparent var(--low),var(--range-color) 0,var(--range-color) var(--high),transparent 0) no-repeat 0 100%/100% 100%;
+    --range-color: var(--e-global-color-medixo_accent);
+    --low: var(--e-global-color-medixo_light);
+}
+
+#sidebar .wc-block-components-filter-submit-button {
+    padding: 0 15px;
+    line-height: 40px;
+    font-size: 12px;
+    background-color: var(--e-global-color-medixo_accent);
+    margin-bottom: 10px;
+    border-radius: 0px;
+}
+
+#sidebar .wc-block-components-filter-reset-button {
+    display: none;
+}
+
+#sidebar .wc-block-components-filter-submit-button:hover {
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+#sidebar .wc-block-components-price-slider {
+    margin-bottom: 0;
+}
+
+#sidebar .wc-block-price-filter__range-text {
+    display: inline-block;
+    margin: 0px;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+#sidebar .wc-block-price-filter__range-text > span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#sidebar .wc-block-price-filter__range-text > span:first-child {
+    position: relative;
+    padding-right: 16px;
+}
+
+#sidebar .wc-block-price-filter__range-text > span:first-child:after {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    content: '-';
+}
+
+#sidebar .wc-block-price-filter.is-disabled {
+    overflow: auto;
+}
+
+#sidebar .wc-block-components-price-slider__actions {
+    display: inline-block;
+    float: right;
+}
+
+#sidebar .wc-block-components-price-slider__actions button[type=submit]:not(.wp-block-search__button).wc-block-components-filter-submit-button {
+    margin: 0;
+}
+
+.widget_price_filter .price_slider {
+    height: 5px;
+    margin-bottom: 12px;
+    margin-top: 17px;
+    background-color: var(--e-global-color-medixo_light);
+    position: relative;
+    text-align: left;
+    border: none;
+}
+
+.widget_price_filter .price_slider > * {
+    border: none;
+}
+
+.widget_price_filter .price_slider_amount {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.widget_price_filter .price_slider_amount .button {
+    font-size: 12px;
+    padding: 0 30px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--e-global-color-medixo_accent);
+    color: #fff;
+    display: block;
+}
+
+.widget_price_filter .price_slider_amount .button:hover {
+    opacity: 1;
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+.widget_price_filter .ui-slider .ui-slider-handle {
+    background-color: var(--e-global-color-medixo_accent);
+    top: -5px;
+    position: absolute;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(-1px);
+}
+
+.widget_price_filter .ui-slider .ui-slider-handle:last-child {
+    margin-left: -13px;
+}
+
+.widget_price_filter .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    border: 0;
+    background-color: var(--e-global-color-medixo_accent);
+}
+
+.widget_price_filter .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+
+.widget_price_filter .ui-slider-horizontal .ui-slider-range-min {
+    left: -1px;
+}
+
+.widget_price_filter .ui-slider-horizontal .ui-slider-range-max {
+    right: -1px;
+}
+
+.widget_price_filter .price_slider_amount .price_label {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    padding-right: 20px;
+    order: 2;
+}
+
+/* Widget widget_product_search */
+#sidebar .widget.widget_product_search {
+    padding: 0;
+}
+
+.widget.widget_product_search .woocommerce-product-search {
+    position: relative;
+    padding: 0;
+}
+
+#footer .widget.widget_product_search .woocommerce-product-search .search-field {
+    margin-bottom: 10px;
+}
+
+#sidebar .wc-block-product-search .wc-block-product-search__button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar .wc-block-product-search .wc-block-product-search__button:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#sidebar .wc-block-product-search .wc-block-product-search__button svg {
+    display: none;
+}
+
+.widget.widget_block .wc-block-product-search__field,
+.widget.widget_product_search .woocommerce-product-search .search-field {
+    margin-bottom: 0;
+    line-height: 26px;
+    padding: 25px 70px 25px 30px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--e-global-color-medixo_border);
+    margin-bottom: 10px;
+}
+
+.widget.widget_product_search .woocommerce-product-search .search-submit {
+    position: absolute;
+    background-color: transparent;
+    right: 20px;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    text-align: center;
+    text-indent: 999999px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+.widget.widget_product_search .woocommerce-product-search .search-submit:before {
+    color: #fff;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    text-indent: 0;
+    font-weight: normal;
+    transition: all ease 0.3s;
+}
+
+.widget.widget_product_search .woocommerce-product-search .search-submit:hover:before {
+    color: var(--e-global-color-medixo_accent);
+}
+
+/* RESPONSIVE
+--------------------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+    .woo-single-post-class .summary .cart .quantity input {
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .products.columns-4 li,
+    .woocommerce-page.shop-col-4 .products li {
+        width: 50%;
+    }
+    .woo-single-post-class .images,
+    .woo-single-post-class .summary {
+        width: 100%;
+        float: none;
+        clear: left;
+    }
+    .woo-single-post-class .summary {
+        padding-top: 60px;
+    }
+    .woo-single-post-class .woocommerce-tabs {
+        margin-top: 100px;
+    }
+    .woo-single-post-class .woocommerce-tabs ul li > a {
+        padding: 12px 30px;
+    }
+    .woo-single-post-class .woocommerce-tabs .comment-respond {
+        margin-top: 30px;
+    }
+    .woo-single-post-class .woocommerce-tabs .panel {
+        padding: 60px 0;
+    }
+    .woocommerce-page .shop_table.cart td,
+    .woocommerce-page .shop_table.cart th {
+        padding: 15px;
+    }
+    .woocommerce-page .shop_table.cart .coupon { 
+        float: none; 
+    }
+    .woocommerce-page .shop_table.cart .coupon + button[type="submit"] {
+        float: none;
+        margin-top: 20px;
+    }
+    .woocommerce-tabs .product-desc {
+        display: block;
+    }
+    .woocommerce-tabs .product-desc .text-wrap {
+        margin: 0 0 60px;
+    }
+    .woo-single-post-class .related.products {
+        margin-top: 60px;
+    }
+    .products li {
+        margin-top: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .products.columns-3 li,
+    .woocommerce-page.shop-col-3 .products li {
+        width: 50%;
+        clear: none;
+    }
+    .cols-3 li { width: 100%; }
+    .products.columns-2 li,
+    .products.columns-4 li,
+    .woocommerce-page.shop-col-2 .products li,
+    .woocommerce-page.shop-col-4 .products li {
+        width: 100%;
+    }
+    .woo-single-post-class .woocommerce-tabs {
+        margin-top: 60px;
+    }
+    .woo-single-post-class .woocommerce-tabs ul {
+        border: 0;
+    }
+    .woo-single-post-class .woocommerce-tabs ul li {
+        display: block;
+        margin-right: 10px;
+        top: 0 !important;
+    }
+    .woo-single-post-class .woocommerce-tabs ul li.active {
+        top: 0;
+    }
+    .woo-single-post-class .woocommerce-tabs ul li.active > a {
+        border: 0 !important;
+        color: var(--e-global-color-medixo_accent);
+    }
+    .woo-single-post-class .woocommerce-tabs ul li > a {
+        display: block;
+        padding: 10px 15px;
+    }
+    .woo-single-post-class .woocommerce-tabs ul li:after {
+        bottom: -1px;
+    }
+    .woo-single-post-class .related.products .products li:last-child {
+        margin-bottom: 0;
+    }
+    .woo-single-post-class .related.products > h2 {
+        margin-bottom: 0;
+    }
+    .woocommerce-page table.shop_table_responsive tr {
+        display: block;
+    }
+    .woocommerce-page table.shop_table_responsive tr td {
+        display: block;
+        text-align: right !important;
+    }
+    .woocommerce-page table.shop_table_responsive tr td.order-actions {
+        text-align: left !important;
+    }
+    .woocommerce-page table.shop_table_responsive tr td:before {
+        content: attr(data-title) ": ";
+        float: left;
+        line-height: 30px;
+    }
+    .woocommerce-page .shop_table.cart .product-name a {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .woocommerce-page table.shop_table_responsive thead,
+    .woocommerce-page table.shop_table_responsive tbody th,
+    .woocommerce-page table.my_account_orders tr td.order-actions:before,
+    .woocommerce-page #content table.cart .product-thumbnail,
+    .woocommerce-page table.cart .product-thumbnail,
+    .woocommerce-page table.shop_table_responsive tr td.actions:before,
+    .woocommerce-page table.shop_table_responsive tr td.product-remove:before {
+        display: none;
+    }
+    .woocommerce-page .shop_table.cart .product-remove,
+    .woocommerce-page .shop_table.cart .product-thumbnail,
+    .woocommerce-page .shop_table.cart .product-price,
+    .woocommerce-page .shop_table.cart .product-quantity,
+    .woocommerce-page .shop_table.cart .product-subtotal {
+        width: auto;
+    }
+    .woocommerce-page table.my_account_orders tr td.order-actions {
+        text-align: left;
+    }
+    .woocommerce-page table.shop_table_responsive tr td.actions {
+        text-align: left !important;
+    }
+    .woocommerce-page .shop_table.cart .coupon #coupon_code,
+    .woocommerce-page .shop_table.cart .coupon > input[type="submit"] {
+        float: none;
+    }
+    .woocommerce-page .cart_totals {
+        width: 100%;
+    }
+    .woo-single-post-class .summary .cart .quantity {
+        margin: 0 10px 30px 0;
+        display: block;
+    }
+    .woocommerce-page .shop_table.cart .product-quantity {
+        height: 90px;
+    }
+    .woocommerce-page table.shop_table_responsive tr td.product-quantity:before {
+        line-height: 60px;
+    }
+    .product-quantity .quantity, .woo-single-post-class .summary .cart .quantity {
+        float: right;
+    }
+    .woocommerce-page .cart_totals {
+        margin-top: 20px;
+    }
+    .woocommerce-page .shop_table img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .products.columns-3 li,
+    .woocommerce-page.shop-col-3 .products li {
+        width: 100%;
+    }
+    #payment #place_order {
+        font-size: 18px;
+        padding: 20px 40px;
+    }
+    .woo-single-post-class .woocommerce-tabs .entry-content .comment_container img {
+        float: none;
+        margin: 0 0 20px;
+    }
+    .woo-single-post-class .woocommerce-tabs .entry-content .star-rating {
+        position: static;
+        margin-bottom: 8px;
+    }
+    .woocommerce-page .shop_table.cart .coupon #coupon_code {
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .woocommerce-page .shop_table.cart .coupon button[type="submit"],
+    .woocommerce-page .shop_table.cart .coupon + button[type="submit"] {
+        width: 100%;
+    }
+    .woocommerce-page .content-woocommerce .woocommerce-ordering {
+        float: none;
+        display: inline-block;
+    }
+    .woocommerce-page .content-woocommerce .woocommerce-result-count {
+        display: none;
+    }
+    .woocommerce-page .content-woocommerce .woocommerce-ordering {
+        float: none;
+    }
+    .woocommerce-page .content-woocommerce .woocommerce-result-count:after,
+    .woocommerce-page .content-woocommerce .woocommerce-ordering:before {
+        display: none;
+    }
+    .shopengine-widget .shopengine-product-rating .woocommerce-product-rating {
+        flex-direction: column;
+    }
+    .comment_container img {
+        float: none;
+        margin-bottom: 30px;
+    }
+    .woocommerce-Reviews .comment-respond .comment-form > .comment-form-author, 
+    .woocommerce-Reviews .comment-respond .comment-form > .comment-form-email {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .woocommerce-page .wc-proceed-to-checkout .button { font-size: 16px; }
+}
+
+/* SHOP ENGINE
+--------------------------------------------------------------*/
+/* Shop Page */
+.shopengine-widget .products li, 
+.shopengine-widget .archive-product-container {
+    width: 100% !important;
+    padding: 0;
+}
+
+.shopengine-archive-products__left-image { 
+    display: none;
+}
+
+.shopengine-widget .product-info img {
+    display: none !important;
+}
+
+.shopengine-widget .shopengine-archive-products .products .product .button.add_to_cart_button {
+    position: absolute;
+}
+
+.shopengine-widget .shopengine-archive-products .loop-product--btns .button.add_to_cart_button {
+    display: none;
+}
+
+.shopengine-widget  .products ul::before {
+    display: none !important;
+}
+
+/* Single Product */
+.shopengine-swatches .shopengine-wishlist.badge,
+.woo-single-post-class .summary .shopengine-wishlist {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 60px;
+    height: 60px;
+    font-weight: 500;
+    padding: 0 30px;
+    color: #fff !important;
+    background-color: var(--e-global-color-medixo_accent);
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.shopengine-swatches .shopengine-wishlist.badge i,
+.woo-single-post-class .summary .shopengine-wishlist i {
+    display: none;
+}
+.shopengine-swatches .shopengine-wishlist.badge:hover,
+.woo-single-post-class .summary .shopengine-wishlist:hover {
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+.shopengine-swatches .shopengine-wishlist.badge.active,
+.woo-single-post-class .summary .shopengine-wishlist.active {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--e-global-color-medixo_accent);
+    color: var(--e-global-color-medixo_accent) !important;
+}
+
+.shopengine-swatches .shopengine-wishlist.badge.active:hover,
+.woo-single-post-class .summary .shopengine-wishlist.active:hover {
+    box-shadow: inset 0 0 2px transparent;
+    background-color: var(--e-global-color-medixo_primary);
+    color: #fff !important;
+}
+
+/* Product Page */
+.shopengine-single-product-item .product-thumb .text,
+.products li .product-thumbnail .text {
+    display: none;
+}
+
+.shopengine-single-product-item .product-thumb .se-btn,
+.products li .product-thumbnail .se-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.products li .product-thumbnail .se-btn {
+    position: absolute;
+    opacity: 0;
+}
+
+.products li .product-thumbnail .se-btn.shopengine-comparison {
+    display: none;
+}
+
+.products li:hover .product-thumbnail .se-btn .text {
+    display: none;
+}
+
+.products li:hover .product-thumbnail .se-btn {
+    opacity: 1;
+}
+
+.products li .product-thumbnail .se-btn i {
+    display: inline-block;
+    line-height: inherit;
+}
+
+.products li .product-thumbnail .se-btn.shopengine-wishlist {
+    top: 70px;
+    right: 20px;
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+.products li .product-thumbnail .se-btn.shopengine-quickview-trigger {
+    top: 70px;
+    background-color: var(--e-global-color-medixo_accent);
+}
+
+.products li .product-thumbnail .se-btn:hover {
+    background-color: var(--e-global-color-medixo_accent);
+}
+
+.shopengine-wishlist.badge.active, 
+.woocommerce .products .product .shopengine-wishlist.badge.active {
+    color: #fff !important;
+}
+
+/* Single Product
+--------------------------------------------------------------*/
+.shopengine-quickview-content-warper {
+    max-width: calc(90% + 30px);
+    margin: 0 auto;
+}
+.woo-single-post-class .summary .cart > .text,
+.woo-single-post-class .summary .cart > .shopengine_comparison_add_to_list_action { display: none; }
+
+/* Product Filter */
+.medixo-products .shopengine-filterable-product-wrap .filter-nav ul li a::before {
+    left: unset;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--e-global-color-medixo_accent);
+    transition: width 0.5s cubic-bezier(0.35, 0.7, 0.35, 1); 
+    border-bottom: none !important;
+}
+
+.medixo-products .shopengine-filterable-product-wrap .filter-nav ul li a.active::before,
+.medixo-products .shopengine-filterable-product-wrap .filter-nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+} 
+
+.products li .product-thumbnail .se-btn .text {
+    display: none;
+}
+
+.shopengine-product-image .shopengine-product-image-toggle {
+    display: none;
+}
+
+/* Product Item */
+.medixo-products .shopengine-widget .shopengine-single-product-item:hover {
+    box-shadow: none !important;
+}
+
+/* Thumb */
+.medixo-products .shopengine-single-product-item .product-thumb {
+    border-radius: 0px !important;
+    overflow: hidden;
+}
+
+.medixo-products .shopengine-widget .shopengine-single-product-item .product-thumb img {
+    transition: all 0.3s ease;
+}
+
+.medixo-products .shopengine-widget .shopengine-single-product-item:hover .product-thumb img {
+    transform: scale(1.2);
+}
+
+
+/* Button Group */
+.medixo-products .shopengine-single-product-item .loop-product--btns .text {
+    font-size: 0;
+}
+
+.medixo-products .shopengine-single-product-item .loop-product--btns a {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px !important;
+    background-color: var(--e-global-color-medixo_primary);
+    color: #fff;
+    border-radius: 50%;
+}
+.medixo-products .shopengine-single-product-item .loop-product--btns a:before {
+    line-height: 40px !important;
+    color: #fff;
+}
+.medixo-products .shopengine-single-product-item .loop-product--btns {
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    height: auto !important;
+    width: 100% !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.medixo-products .shopengine-single-product-item .overlay-add-to-cart,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner {
+    top: 50% !important;
+    bottom: unset !important;
+    display: flex !important;
+    width: auto !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+}
+
+.medixo-products .shopengine-single-product-item:hover .loop-product--btns-inner {
+    opacity: 1;
+}
+
+.medixo-products .shopengine-single-product-item > .add-to-cart-bt {
+    display: none !important;
+}
+
+.medixo-products .shopengine-widget .shopengine-single-product-item .overlay-add-to-cart a,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner .button,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner .badge {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 5px !important;
+    background-color: var(--e-global-color-medixo_primary) !important;
+    flex: 0 !important;
+}
+
+.medixo-products .shopengine-widget .shopengine-single-product-item .overlay-add-to-cart a:hover,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner .button:hover,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner .badge:hover {
+    background-color: var(--e-global-color-medixo_accent) !important;
+}
+
+.medixo-products .shopengine-widget .shopengine-filterable-product-wrap .filter-content .shopengine-single-product-item .loop-product--btns a {
+    border-radius: 50% !important;
+}
+
+.medixo-products .shopengine-single-product-item .overlay-add-to-cart a:before,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner .button:before,
+.medixo-products .shopengine-single-product-item .loop-product--btns-inner .badge:before {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    color: #fff !important;
+}
+
+.medixo-products .shopengine-widget .shopengine-product-list .shopengine-single-product-item .overlay-add-to-cart a.button[data-quantity]:before,
+.medixo-products .shopengine-widget .shopengine-filterable-product-wrap .filter-content .shopengine-single-product-item .loop-product--btns a.button[data-quantity]:before {
+    content: "\e938";
+    font-family: "core-icons";
+}
+
+/* Rating */
+.shopengine-widget .shopengine-product-rating .star-rating span,
+.shopengine-widget .shopengine-product-rating .star-rating {
+    background: none !important;
+    transform: none !important;
+    order: unset !important;
+}
+
+.shopengine-widget .common-product-loop .products .product .star-rating span::before, 
+.shopengine-widget .common-star-rating .star-rating span::before, 
+.shopengine-widget .shopengine-cross-sells .cross-sells .products .product .star-rating span::before, 
+.shopengine-widget .shopengine-product-rating .star-rating span::before, 
+.shopengine-widget .shopengine-product-rating .woocommerce-product-rating .star-rating span::before,
+.shopengine-widget .shopengine-product-review #reviews .star-rating span::before, 
+.shopengine-widget .shopengine-product-tabs #reviews .star-rating span::before, 
+.shopengine-widget .shopengine-related .related .products .product .star-rating span::before, 
+.shopengine-widget .shopengine-up-sells .up-sells .products .product .star-rating span::before,
+.shopengine-widget .common-product-loop .products .product .star-rating::before, 
+.shopengine-widget .common-star-rating .star-rating::before, 
+.shopengine-widget .shopengine-cross-sells .cross-sells .products .product .star-rating::before, 
+.shopengine-widget .shopengine-product-rating .star-rating::before, 
+.shopengine-widget .shopengine-product-rating .woocommerce-product-rating .star-rating::before, 
+.shopengine-widget .shopengine-product-review #reviews .star-rating::before, 
+.shopengine-widget .shopengine-product-tabs #reviews .star-rating::before, 
+.shopengine-widget .shopengine-related .related .products .product .star-rating::before, 
+.shopengine-widget .shopengine-up-sells .up-sells .products .product .star-rating::before {
+    letter-spacing: 8px !important;
+}
+
+.shopengine-widget .common-product-loop .products .product .star-rating, 
+.shopengine-widget .common-star-rating .star-rating, 
+.shopengine-widget .shopengine-cross-sells .cross-sells .products .product .star-rating, 
+.shopengine-widget .shopengine-product-rating .star-rating, 
+.shopengine-widget .shopengine-product-rating .woocommerce-product-rating .star-rating, 
+.shopengine-widget .shopengine-product-review #reviews .star-rating, 
+.shopengine-widget .shopengine-product-tabs #reviews .star-rating, 
+.shopengine-widget .shopengine-related .related .products .product .star-rating, 
+.shopengine-widget .shopengine-up-sells .up-sells .products .product .star-rating {
+    width: 115px !important;
+}
+
+.medixo-products .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-rating .star-rating,
+.medixo-products .shopengine-widget .shopengine-filterable-product-wrap .filter-content .shopengine-single-product-item .product-rating .star-rating {
+    width: 89px;
+}
+
+.medixo-products .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-rating {
+    width: auto;
+}
+
+.medixo-products .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-rating .star-rating span::before,
+.medixo-products .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-rating .star-rating::before,
+.medixo-products .shopengine-widget .shopengine-filterable-product-wrap .filter-content .shopengine-single-product-item .product-rating .star-rating::before,
+.medixo-products .shopengine-widget .shopengine-filterable-product-wrap .filter-content .shopengine-single-product-item .product-rating .star-rating span::before {
+    letter-spacing: 4px;
+}
+
+.medixo-products .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-rating .rating-count {
+    display: none;
+}
+
+/* Style 2 */
+.medixo-products.style-2 .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-price {
+    clear: both;
+}
+.medixo-products.style-2 .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-title {
+    float: left;
+}
+.medixo-products.style-2 .shopengine-widget .shopengine-product-list .shopengine-single-product-item .product-rating {
+    float: right;
+}
+
+.shopengine-widget p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* Cart Page
+--------------------------------------------------------------*/
+.is-large.wc-block-cart.wc-block-components-sidebar-layout .wc-block-cart__totals-title,
+.is-large.wc-block-cart .wc-block-cart-items th { font-size: 18px; color: var(--e-global-color-medixo_primary); }
+.wc-block-components-order-summary-item__description .wc-block-components-product-name,
+.editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name, 
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name { font-size: 18px; line-height: 26px; font-weight: 500; color: var(--e-global-color-medixo_accent) !important; }
+.wc-block-components-formatted-money-amount { color: var(--e-global-color-medixo_primary); font-weight: 500; }
+.wc-block-components-product-metadata .wc-block-components-product-metadata__description { font-size: 16px; line-height: 28px; }
+.wc-block-cart-item__quantity .wc-block-components-quantity-selector>.wc-block-components-quantity-selector__button { font-size: 18px; border-radius: 0; }
+.editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link,
+table.wc-block-cart-items.wp-block-woocommerce-cart-line-items-block .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link { text-transform: uppercase; font-size: 16px; font-weight: 500; }
+.wc-block-components-button:not(.is-link) { font-size: 16px; line-height:48px; font-weight: 700; background-color: var(--e-global-color-medixo_accent); color: #fff; transition: 0.3s ease; }
+.wc-block-components-button:not(.is-link):hover { background-color: var(--e-global-color-medixo_primary); }
+.wc-block-cart-item__quantity .wc-block-components-quantity-selector:after,
+.wc-block-cart-item__quantity .wc-block-components-quantity-selector { border-radius: 0; }
+.wc-block-cart-item__total .wc-block-components-product-price__value { font-weight: 600; }
+
+/* Checkout Page
+--------------------------------------------------------------*/
+.wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input, 
+.wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input,
+.wc-block-components-form .wc-block-components-text-input input[type=email], 
+.wc-block-components-form .wc-block-components-text-input input[type=number], 
+.wc-block-components-form .wc-block-components-text-input input[type=tel], 
+.wc-block-components-form .wc-block-components-text-input input[type=text], 
+.wc-block-components-form .wc-block-components-text-input input[type=url], 
+.wc-block-components-text-input input[type=email], 
+.wc-block-components-text-input input[type=number], 
+.wc-block-components-text-input input[type=tel], 
+.wc-block-components-text-input input[type=text], 
+.wc-block-components-text-input input[type=url] {
+  border-color: var(--e-global-color-medixo_border) !important;
+  border-radius: 3px !important;
+}
+
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button {
+  padding: 6px !important;
+}
+
+.wc-block-components-order-summary.wc-block-components-panel .wc-block-components-order-summary-item__individual-prices {
+  padding-top: 0px;
+}
+
+.wc-block-components-address-form__address_2-toggle {
+    background-color: var(--e-global-color-medixo_accent) !important;
+    padding-left: 16px !important;
+}
+
+.wc-block-components-address-form__address_2-toggle:hover {
+    background-color: var(--e-global-color-medixo_primary) !important;
+}
+
+/* My Account
+--------------------------------------------------------------*/
+.woocommerce-page .login input {
+    margin-top: 0;
+}
+
+.woocommerce-form input {
+    background-color: var(--e-global-color-medixo_light);
+}
+
+.woocommerce-page .u-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.woocommerce-page .u-columns.col2-set > div {
+    width: 48%;
+}
+
+.woocommerce-page #customer_login h2 {
+    margin-bottom: 30px;
+}
+
+.woocommerce-form-register,
+.woocommerce-form-login {
+    padding: 30px;
+    border: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woocommerce-form-register .form-row label,
+.woocommerce-form-login .form-row label {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 5px;
+}
+
+.woocommerce-form-login .woocommerce-form__input.woocommerce-form__input-checkbox {
+    margin-top: -3px;
+}
+
+.woocommerce-form-register .form-row button,
+.woocommerce-form-login .form-row button {
+    width: 100%;
+}
+
+.woocommerce-form-register .form-row button {
+    background-color: var(--e-global-color-medixo_primary);
+}
+
+.woocommerce-form-register .form-row button:hover {
+    background-color: var(--e-global-color-medixo_accent);
+}
+
+.woocommerce-form-register a,
+.woocommerce-form-login a {
+    color: #2742fd;
+}
+
+.woocommerce-form-register a:hover,
+.woocommerce-form-login a:hover {
+    color: #f03d3f;
+}
+
+.woocommerce-form-register p,
+.woocommerce-form-login p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* My Account Navigation */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    float: left;
+    width: 30%;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+    float: right;
+    width: 68%;
+}
+
+.woocommerce-MyAccount-navigation ul {
+    margin: 0;
+    border: 1px solid var(--e-global-color-medixo_border);
+}
+
+.woocommerce-MyAccount-navigation ul li {
+    list-style: none;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_text);
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active {
+    background-color: var(--e-global-color-medixo_light);
+}
+
+.woocommerce-MyAccount-navigation ul li a:hover,
+.woocommerce-MyAccount-navigation ul li.is-active a {
+    color: var(--e-global-color-medixo_primary);
+}
+
+/* Wishlist */
+.shopengine-wishlist {
+    margin-bottom: 0;
+}
+
+.shopengine-wishlist .wishlist-product-name,
+.shopengine-wishlist tr th {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--e-global-color-medixo_primary);
+}
+
+.shopengine-wishlist tr th:nth-child(1),
+.shopengine-wishlist tr td:nth-child(1) {
+    width: 350px;
+}
+
+.shopengine-wishlist tr th:nth-child(4),
+.shopengine-wishlist tr td:nth-child(4) {
+    width: 90px;
+}
+
+.shopengine-wishlist tr td:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.shopengine-wishlist .shopengine-wishlist-product-image {
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 30px;
+    max-width: 80px;
+}
+
+.shopengine-wishlist .wishlist-product-name {
+    display: inline-block;
+    margin: 0;
+}
+
+.shopengine-wishlist .wishlist-product-name a {
+    color: inherit;
+    margin-bottom: 0;
+}
+
+/* Product Review */
+.products li .product-thumbnail .se-btn.shopengine-quickview-trigger {
+    display: none;
+}
+
+.medixo-product-review {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.medixo-product-review .shopengine-widget .shopengine-product-review #reviews #comments .commentlist li .comment_container .avatar, 
+.medixo-product-review .shopengine-widget .shopengine-product-review #reviews #comments .commentlist li .comment_container .img-thumbnail {
+    max-width: 166px !important;
+    max-height: 166px !important;
+    margin-right: 45px;
+}
+
+.medixo-product-review .shopengine-widget .shopengine-product-review #reviews #comments .commentlist li .comment_container .comment-text {
+    position: relative;
+}
+
+.medixo-product-review .shopengine-widget .shopengine-product-review #reviews #comments .commentlist li .comment_container .comment-text .star-rating {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.medixo-product-review .woocommerce-review__author {
+    font-size: 20px;
+    display: block;
+    color: var(--e-global-color-medixo_primary) !important;
+    font-weight: 800 !important;
+    line-height: 28px;
+    margin-top: 7px;
+}
+
+.medixo-product-review .woocommerce-review__dash {
+    display: none !important;
+}
+
+.medixo-product-review .woocommerce-review__published-date {
+    font-size: 16px !important;
+    line-height: 26px;
+    color: var(--e-global-color-medixo_accent) !important;
+    font-weight: 600;
+}
+
+.medixo-product-review .shopengine-widget .shopengine-product-review #reviews #comments .commentlist li .comment_container .meta {
+    margin-bottom: 20px;
+}
+
+.medixo-product-review .comment-form-rating {
+    display: flex !important;
+    align-items: center;
+}
+
+.medixo-product-review .comment-form-rating label,
+.medixo-product-review .comment-form-rating .stars {
+    width: auto !important
+}
+
+.medixo-product-review .comment-form-rating label {
+    padding-right: 20px;
+}
+.medixo-product-review .comment-form-rating .stars {
+    margin-bottom: 8px !important;
+}
+
+.shopengine-widget .shopengine-swatches .cart .quantity .qty { width: 60px; }
+
+/* Advanced Search */
+.shopengine-widget .shopengine-advanced-search .shopengine-search-product__item--content h4 { font-size: 18px; line-height: 24px; margin-bottom: 5px; }
+.shopengine-widget .shopengine-advanced-search .shopengine-search-product__item--price { margin-top: 10px; }
+.shopengine-widget .shopengine-advanced-search .search-input-group button { display: flex; justify-content: center; align-items: center; padding: 5px; }
+
+@media only screen and (max-width: 1024px) {
+    .woocommerce-account .woocommerce-MyAccount-content {
+        float: none;
+        width: 100%;
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation ul {
+        width: auto;
+        border: none;
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation ul li {
+        display: inline-block;
+        border: 1px solid var(--e-global-color-medixo_border);
+        border-collapse: collapse;
+        margin: 0 5px 5px 0;
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-navigation {
+        margin-bottom: 30px;
+        float: none;
+        width: auto;
+    }
+}   
+
+@media only screen and (max-width: 767px) {
+    .shopengine-wishlist tr th,
+    .shopengine-wishlist tr td {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .shopengine-wishlist tr td,
+    .shopengine-wishlist .wishlist-product-name, 
+    .shopengine-wishlist tr th { font-size: 14px; line-height: 20px; }
+    .shopengine-wishlist .shopengine-wishlist-product-image { display: none; }
+    .shopengine-single .shopengine-product-rating .star-rating { margin: 0 0 10px !important; }
+    .shopengine-swatches .cart .quantity-title, .woo-single-post-class .summary .cart .quantity-title { line-height: 30px; width: 100%; }
+    .elementor-widget-mae-product-review .meta strong, .woo-single-post-class .woocommerce-tabs .entry-content .meta strong { display: block; }
+}
+
+@media only screen and (max-width: 320px) {
+    .shopengine-wishlist tr td,
+    .shopengine-wishlist .wishlist-product-name, 
+    .shopengine-wishlist tr th { font-size: 12px; }
+}
